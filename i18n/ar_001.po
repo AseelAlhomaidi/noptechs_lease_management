@@ -1,0 +1,259 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* noptechs_lease_management
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-01-13 12:17+0000\n"
+"PO-Revision-Date: 2026-01-13 12:17+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: ar\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: noptechs_lease_management
+#: model_terms:ir.ui.view,arch_db:noptechs_lease_management.view_company_lease_list
+msgid "Alert"
+msgstr "تنبيه"
+
+#. module: noptechs_lease_management
+#: model:ir.model.fields,field_description:noptechs_lease_management.field_company_lease__amount_paid
+msgid "Amount Paid"
+msgstr "المبلغ المدفوع"
+
+#. module: noptechs_lease_management
+#: model:ir.model.fields,field_description:noptechs_lease_management.field_company_lease__landlord_bank_account
+msgid "Bank Number"
+msgstr "رقم الحساب البنكي"
+
+
+
+
+#. module: noptechs_lease_management
+#: model_terms:ir.ui.view,arch_db:noptechs_lease_management.view_company_lease_form
+msgid "Banking"
+msgstr "البيانات البنكية"
+
+#. module: noptechs_lease_management
+#: model:ir.model,name:noptechs_lease_management.model_company_lease
+msgid "Company Lease"
+msgstr "عقود الإيجار"
+
+#. module: noptechs_lease_management
+#: model_terms:ir.ui.view,arch_db:noptechs_lease_management.view_company_lease_form
+msgid "Contract Details"
+msgstr "تفاصيل العقد"
+
+#. module: noptechs_lease_management
+#: model:ir.model.fields,field_description:noptechs_lease_management.field_company_lease__contract_number
+#: model_terms:ir.ui.view,arch_db:noptechs_lease_management.view_company_lease_form
+msgid "Contract Number"
+msgstr "رقم العقد"
+
+#. module: noptechs_lease_management
+#: model:ir.model.fields,field_description:noptechs_lease_management.field_company_lease__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: noptechs_lease_management
+#: model:ir.model.fields,field_description:noptechs_lease_management.field_company_lease__create_date
+msgid "Created on"
+msgstr "تاريخ الإنشاء"
+
+#. module: noptechs_lease_management
+#: model:ir.model.fields,field_description:noptechs_lease_management.field_company_lease__currency_id
+msgid "Currency"
+msgstr "العملة"
+
+#. module: noptechs_lease_management
+#: model:ir.model.fields,field_description:noptechs_lease_management.field_company_lease__days_to_expiry
+msgid "Days to Expiry"
+msgstr "الأيام المتبقية حتى الانتهاء"
+
+#. module: noptechs_lease_management
+#: model:ir.model.fields,field_description:noptechs_lease_management.field_company_lease__display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: noptechs_lease_management
+#: model:ir.model.fields,field_description:noptechs_lease_management.field_company_lease__end_date
+msgid "End Date"
+msgstr "تاريخ نهاية العقد"
+
+#. module: noptechs_lease_management
+#: model_terms:ir.ui.view,arch_db:noptechs_lease_management.view_company_lease_form
+msgid "Financials"
+msgstr "البيانات المالية"
+
+#. module: noptechs_lease_management
+#: model:ir.model.fields.selection,name:noptechs_lease_management.selection__company_lease__unit_type__housing
+msgid "Housing"
+msgstr "سكني"
+
+#. module: noptechs_lease_management
+#: model:ir.model.fields,field_description:noptechs_lease_management.field_company_lease__id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: noptechs_lease_management
+#: model:ir.model.fields,field_description:noptechs_lease_management.field_company_lease__installments_per_year
+msgid "Installments per Year"
+msgstr "عدد الدفعات في السنة"
+
+#. module: noptechs_lease_management
+#: model:ir.model.fields,field_description:noptechs_lease_management.field_company_lease__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: noptechs_lease_management
+#: model:ir.model.fields,field_description:noptechs_lease_management.field_company_lease__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: noptechs_lease_management
+#: model:ir.actions.act_window,name:noptechs_lease_management.action_company_lease
+#: model:ir.ui.menu,name:noptechs_lease_management.menu_lease_management
+msgid "Lease Management"
+msgstr "إدارة عقود الإيجار"
+
+#. module: noptechs_lease_management
+#: model:ir.ui.menu,name:noptechs_lease_management.menu_lease_root
+msgid "Leases"
+msgstr "الإيجارات"
+
+#. module: noptechs_lease_management
+#: model_terms:ir.ui.view,arch_db:noptechs_lease_management.view_company_lease_form
+msgid "Location"
+msgstr "الموقع"
+
+#. module: noptechs_lease_management
+#: model_terms:ir.ui.view,arch_db:noptechs_lease_management.view_company_lease_form
+msgid "Notes"
+msgstr "ملاحظات"
+
+#. module: noptechs_lease_management
+#: model:ir.model.fields,field_description:noptechs_lease_management.field_company_lease__notes
+msgid "Notes (VAT/Remarks)"
+msgstr "ملاحظات (الضريبة / ملاحظات عامة)"
+
+#. module: noptechs_lease_management
+#: model:ir.model.fields.selection,name:noptechs_lease_management.selection__company_lease__unit_type__office
+msgid "Office"
+msgstr "مكتب"
+
+#. module: noptechs_lease_management
+#: model_terms:ir.ui.view,arch_db:noptechs_lease_management.view_company_lease_form
+msgid "Payment Terms"
+msgstr "شروط الدفع"
+
+#. module: noptechs_lease_management
+#: model:ir.model.fields,field_description:noptechs_lease_management.field_company_lease__region
+msgid "Region"
+msgstr "المنطقة"
+
+#. module: noptechs_lease_management
+#: model:ir.model.fields,field_description:noptechs_lease_management.field_company_lease__remaining_balance
+msgid "Remaining Balance"
+msgstr "المبلغ المتبقي"
+
+
+#. module: noptechs_lease_management
+#: model:ir.model.fields,field_description:noptechs_lease_management.field_company_lease__renewal_alert
+#: model_terms:ir.ui.view,arch_db:noptechs_lease_management.view_company_lease_form
+msgid "Renewal Alert"
+msgstr "تنبيه التجديد"
+
+#. module: noptechs_lease_management
+#: model:ir.model.fields,field_description:noptechs_lease_management.field_company_lease__start_date
+msgid "Start Date"
+msgstr "تاريخ بداية العقد"
+
+#. module: noptechs_lease_management
+#: model:ir.model.fields,field_description:noptechs_lease_management.field_company_lease__total_rental_amount
+msgid "Total Rental Amount"
+msgstr "إجمالي قيمة الإيجار"
+
+#. module: noptechs_lease_management
+#: model:ir.model.fields,field_description:noptechs_lease_management.field_company_lease__unit_type
+msgid "Unit Type"
+msgstr "نوع الوحدة"
+
+#. module: noptechs_lease_management
+#: model_terms:ir.ui.view,arch_db:noptechs_lease_management.view_company_lease_form
+msgid "VAT details and general remarks..."
+msgstr "تفاصيل الضريبة وملاحظات عامة..."
+
+#. module: noptechs_lease_management
+#: model:ir.model.fields.selection,name:noptechs_lease_management.selection__company_lease__unit_type__warehouse
+msgid "Warehouse"
+msgstr "مستودع"
+
+#. module: noptechs_lease_management
+#: model:ir.model.fields.selection,name:noptechs_lease_management.selection__company_lease__lease_status__active
+msgid "Active"
+msgstr "ساري"
+
+#. module: noptechs_lease_management
+#: model:ir.model.fields.selection,name:noptechs_lease_management.selection__company_lease__lease_status__expiring
+msgid "Expiring (< 3 months)"
+msgstr "قارب على الانتهاء (أقل من 3 أشهر)"
+
+#. module: noptechs_lease_management
+#: model:ir.model.fields.selection,name:noptechs_lease_management.selection__company_lease__lease_status__expired
+msgid "Expired"
+msgstr "منتهي"
+
+#. module: noptechs_lease_management
+#: model:ir.model.fields,field_description:noptechs_lease_management.field_company_lease__lease_status
+msgid "Lease Status"
+msgstr "حالة العقد"
+
+#. module: noptechs_lease_management
+#: model_terms:ir.ui.view,arch_db:noptechs_lease_management.view_company_lease_form
+msgid "Payments"
+msgstr "المدفوعات"
+
+#. module: noptechs_lease_management
+#: model:ir.model.fields,field_description:noptechs_lease_management.field_company_lease_payment__payment_date
+msgid "Payment Date"
+msgstr "تاريخ الدفع"
+
+#. module: noptechs_lease_management
+#: model:ir.model.fields,field_description:noptechs_lease_management.field_company_lease_payment__amount
+msgid "Amount"
+msgstr "المبلغ"
+
+#. module: noptechs_lease_management
+#: model:ir.model.fields,field_description:noptechs_lease_management.field_company_lease_payment__paid_by
+msgid "Paid By"
+msgstr "تم الدفع بواسطة"
+
+#. module: noptechs_lease_management
+#: model:ir.model.fields,field_description:noptechs_lease_management.field_company_lease_payment__reference
+msgid "Reference"
+msgstr "المرجع"
+
+#. module: noptechs_lease_management
+#: model:ir.model.fields,field_description:noptechs_lease_management.field_company_lease_payment__note
+msgid "Notes"
+msgstr "ملاحظات"
+
+#. module: noptechs_lease_management
+#: model:ir.model.fields,field_description:noptechs_lease_management.field_company_lease_payment__receipt_attachment_ids
+msgid "Receipts"
+msgstr "الإيصالات"
+
+#. module: noptechs_lease_management
+#: model:ir.model.fields,help:noptechs_lease_management.field_company_lease_payment__receipt_attachment_ids
+msgid "Upload transfer receipt(s) for this payment."
+msgstr "ارفع إيصال/إيصالات التحويل لهذه الدفعة."
+
+#. module: noptechs_lease_management
+#: model:ir.model.fields,field_description:noptechs_lease_management.field_company_lease__payment_line_ids
+msgid "Payments"
+msgstr "المدفوعات"

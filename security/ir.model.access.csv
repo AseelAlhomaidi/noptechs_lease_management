@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_company_lease_user,access.company.lease.user,model_company_lease,base.group_user,1,1,1,0
+access_company_lease_manager,access.company.lease.manager,model_company_lease,base.group_system,1,1,1,1
+access_company_lease_payment_user,access.company.lease.payment.user,model_company_lease_payment,base.group_user,1,1,1,0
+access_company_lease_payment_manager,access.company.lease.payment.manager,model_company_lease_payment,base.group_system,1,1,1,1
