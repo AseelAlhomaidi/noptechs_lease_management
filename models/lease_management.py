@@ -5,29 +5,57 @@ from odoo.exceptions import ValidationError
 
 class CompanyLease(models.Model):
     _name = "company.lease"
+    _inherit = ["mail.thread", "mail.activity.mixin"]
     _description = "Company Lease"
     _rec_name = "contract_number"
     _order = "end_date asc"
     
 
-    region = fields.Char(string="Region", required=True)
+    region = fields.Char(string="Name of residence/office", required=True, tracking=True)
 
     unit_type = fields.Selection(
         [
             ("office", "Office"),
-            ("housing", "Housing"),
-            ("warehouse", "Warehouse"),
+            ("contractors_office", "Contractors Office"),
+            ("customer_service_office", "Customer Service Office"),
+            ("villa", "Villa"),
+            ("contractors_villa", "Contractors Villa"),
+            ("customer_service_villa", "Customer Service Villa"),
+            ("apartment", "Apartment"),
+            ("contractors_apartment", "Contractors Apartment"),
+            ("customer_service_apartment", "Customer Service Apartment"),
         ],
         string="Unit Type",
         required=True,
         default="office",
+        tracking=True,
     )
 
-    contract_number = fields.Char(string="Contract Number", required=True, index=True)
-    start_date = fields.Date(string="Start Date", required=True)
-    end_date = fields.Date(string="End Date", required=True)
+    partner_id = fields.Many2one("institution.master", string="Office / Company", required=True, tracking=True)
 
-    installments_per_year = fields.Integer(string="Installments per Year", default=1)
+    establishment_representative = fields.Selection(
+        [
+            ("abu_nayef", "ابو نايف"),
+            ("abu_saad", "ابو سعد"),
+            ("fahad_zain", "فهاد زاين"),
+            ("mohammed_alloush", "محمد علوش"),
+            ("bari_zain", "باري زاين"),
+            ("noura_bari", "نوره باري"),
+            ("noura_zain", "نوره زاين"),
+            ("miznah_zain", "مزنة زاين"),
+            ("ryoof_alloush", "ريوف علوش"),
+            ("nouf_zain", "نوف زاين"),
+            ("rajsaa_alloush", "رجساء علوش"),
+        ],
+        string="Establishment Representative",
+        tracking=True,
+    )
+
+    contract_number = fields.Char(string="Contract Number", required=True, index=True, tracking=True)
+    start_date = fields.Date(string="Start Date", required=True, tracking=True)
+    end_date = fields.Date(string="End Date", required=True, tracking=True)
+
+    installments_per_year = fields.Integer(string="Installments per Year", default=1, tracking=True)
 
     currency_id = fields.Many2one(
         "res.currency",
@@ -36,7 +64,7 @@ class CompanyLease(models.Model):
         required=True,
     )
 
-    total_rental_amount = fields.Monetary(string="Total Rental Amount", required=True, default=0.0)
+    total_rental_amount = fields.Monetary(string="Total Rental Amount", required=True, default=0.0, tracking=True)
     amount_paid = fields.Monetary(
         string="Amount Paid",
         compute="_compute_amounts",
@@ -50,8 +78,8 @@ class CompanyLease(models.Model):
         readonly=True,
     )
 
-    landlord_bank_account = fields.Char(string="Bank Number")
-    notes = fields.Text(string="Notes (VAT/Remarks)")
+    landlord_bank_account = fields.Char(string="Bank Number", tracking=True)
+    notes = fields.Text(string="Notes (VAT/Remarks)", tracking=True)
 
     days_to_expiry = fields.Integer(string="Days to Expiry", compute="_compute_expiry", store=True)
     renewal_alert = fields.Boolean(string="Renewal Alert", compute="_compute_expiry", store=True)
@@ -66,6 +94,7 @@ class CompanyLease(models.Model):
         compute="_compute_expiry",
         store=True,
         index=True,
+        tracking=True,
     )
 
     # ✅ Payments lines (real-life tracking)
@@ -127,10 +156,10 @@ class CompanyLeasePayment(models.Model):
     _description = "Lease Payment"
     _order = "payment_date desc, id desc"
 
-    lease_id = fields.Many2one("company.lease", string="Lease", required=True, ondelete="cascade")
+    lease_id = fields.Many2one("company.lease", string="Lease", required=True, ondelete="cascade", tracking=True)
 
     payment_date = fields.Date(string="Payment Date", default=fields.Date.context_today, required=True)
-    amount = fields.Monetary(string="Amount", required=True, default=0.0)
+    amount = fields.Monetary(string="Amount", required=True, default=0.0, tracking=True)
 
     currency_id = fields.Many2one(
         related="lease_id.currency_id",
@@ -138,16 +167,16 @@ class CompanyLeasePayment(models.Model):
         readonly=True,
     )
 
-    paid_by = fields.Many2one(
-        "res.users",
-        string="Paid By",
-        default=lambda self: self.env.user,
-        required=True,
-        readonly=True,
-    )
+    # paid_by = fields.Many2one(
+    #     "res.users",
+    #     string="Paid By",
+    #     default=lambda self: self.env.user,
+    #     required=True,
+    #     readonly=True,
+    # )
 
-    reference = fields.Char(string="Reference")
-    note = fields.Text(string="Notes")
+    # reference = fields.Char(string="Reference")
+    # note = fields.Text(string="Notes")
 
     receipt_attachment_ids = fields.Many2many(
         "ir.attachment",
@@ -158,12 +187,10 @@ class CompanyLeasePayment(models.Model):
         help="Upload transfer receipt(s) for this payment.",
     )
 
-    @api.constrains("amount")
-    def _check_amount_positive(self):
-        for rec in self:
-            if rec.amount <= 0:
-                raise ValidationError(_("Payment amount must be greater than zero."))
+    installment_number = fields.Char(string="Installment Number", default="1", tracking=True)
+    note = fields.Text(string="Notes", tracking=True)
 
+    
 
 
 

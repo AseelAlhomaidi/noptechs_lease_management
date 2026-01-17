@@ -90,10 +90,21 @@ msgstr "تاريخ نهاية العقد"
 msgid "Financials"
 msgstr "البيانات المالية"
 
+
 #. module: noptechs_lease_management
-#: model:ir.model.fields.selection,name:noptechs_lease_management.selection__company_lease__unit_type__housing
-msgid "Housing"
-msgstr "سكني"
+#: model:ir.model.fields.selection,name:noptechs_lease_management.selection__company_lease__unit_type__villa
+msgid "Villa"
+msgstr "فيلا"
+
+#. module: noptechs_lease_management
+#: model:ir.model.fields.selection,name:noptechs_lease_management.selection__company_lease__unit_type__contractors_villa
+msgid "Contractors Villa"
+msgstr "فيلا مقاولين"
+
+#. module: noptechs_lease_management
+#: model:ir.model.fields.selection,name:noptechs_lease_management.selection__company_lease__unit_type__customer_service_villa
+msgid "Customer Service Villa"
+msgstr "فيلا خدمة عملاء"
 
 #. module: noptechs_lease_management
 #: model:ir.model.fields,field_description:noptechs_lease_management.field_company_lease__id
@@ -142,9 +153,84 @@ msgid "Notes (VAT/Remarks)"
 msgstr "ملاحظات (الضريبة / ملاحظات عامة)"
 
 #. module: noptechs_lease_management
+#: model:ir.model.fields.selection,name:noptechs_lease_management.selection__company_lease__establishment_representative__abu_nayef
+msgid "ابو نايف"
+msgstr "ابو نايف"
+
+#. module: noptechs_lease_management
+#: model:ir.model.fields.selection,name:noptechs_lease_management.selection__company_lease__establishment_representative__abu_saad
+msgid "ابو سعد"
+msgstr "ابو سعد"
+
+#. module: noptechs_lease_management
+#: model:ir.model.fields.selection,name:noptechs_lease_management.selection__company_lease__establishment_representative__fahad_zain
+msgid "فهاد زاين"
+msgstr "فهاد زاين"
+
+#. module: noptechs_lease_management
+#: model:ir.model.fields.selection,name:noptechs_lease_management.selection__company_lease__establishment_representative__mohammed_alloush
+msgid "محمد علوش"
+msgstr "محمد علوش"
+
+#. module: noptechs_lease_management
+#: model:ir.model.fields.selection,name:noptechs_lease_management.selection__company_lease__establishment_representative__bari_zain
+msgid "باري زاين"
+msgstr "باري زاين"
+
+#. module: noptechs_lease_management
+#: model:ir.model.fields.selection,name:noptechs_lease_management.selection__company_lease__establishment_representative__noura_bari
+msgid "نوره باري"
+msgstr "نوره باري"
+
+#. module: noptechs_lease_management
+#: model:ir.model.fields.selection,name:noptechs_lease_management.selection__company_lease__establishment_representative__noura_zain
+msgid "نوره زاين"
+msgstr "نوره زاين"
+
+#. module: noptechs_lease_management
+#: model:ir.model.fields.selection,name:noptechs_lease_management.selection__company_lease__establishment_representative__miznah_zain
+msgid "مزنة زاين"
+msgstr "مزنة زاين"
+
+#. module: noptechs_lease_management
+#: model:ir.model.fields.selection,name:noptechs_lease_management.selection__company_lease__establishment_representative__ryoof_alloush
+msgid "ريوف علوش"
+msgstr "ريوف علوش"
+
+#. module: noptechs_lease_management
+#: model:ir.model.fields.selection,name:noptechs_lease_management.selection__company_lease__establishment_representative__nouf_zain
+msgid "نوف زاين"
+msgstr "نوف زاين"
+
+#. module: noptechs_lease_management
+#: model:ir.model.fields.selection,name:noptechs_lease_management.selection__company_lease__establishment_representative__rajsaa_alloush
+msgid "رجساء علوش"
+msgstr "رجساء علوش"
+
+#. module: noptechs_lease_management
+#: model:ir.model.fields,field_description:noptechs_lease_management.field_company_lease__partner_id
+msgid "Office / Company"
+msgstr "مكتب / مؤسسة"
+
+#. module: noptechs_lease_management
+#: model:ir.model.fields,field_description:noptechs_lease_management.field_company_lease__establishment_representative
+msgid "Establishment Representative"
+msgstr "ممثل المنشأة / ممثلة الإيجار"
+
+#. module: noptechs_lease_management
 #: model:ir.model.fields.selection,name:noptechs_lease_management.selection__company_lease__unit_type__office
 msgid "Office"
 msgstr "مكتب"
+
+#. module: noptechs_lease_management
+#: model:ir.model.fields.selection,name:noptechs_lease_management.selection__company_lease__unit_type__contractors_office
+msgid "Contractors Office"
+msgstr "مكتب مقاولين"
+
+#. module: noptechs_lease_management
+#: model:ir.model.fields.selection,name:noptechs_lease_management.selection__company_lease__unit_type__customer_service_office
+msgid "Customer Service Office"
+msgstr "مكتب خدمة عملاء"
 
 #. module: noptechs_lease_management
 #: model_terms:ir.ui.view,arch_db:noptechs_lease_management.view_company_lease_form
@@ -153,8 +239,8 @@ msgstr "شروط الدفع"
 
 #. module: noptechs_lease_management
 #: model:ir.model.fields,field_description:noptechs_lease_management.field_company_lease__region
-msgid "Region"
-msgstr "المنطقة"
+msgid "Name of residence/office"
+msgstr "اسم السكن/المكتب"
 
 #. module: noptechs_lease_management
 #: model:ir.model.fields,field_description:noptechs_lease_management.field_company_lease__remaining_balance
@@ -189,9 +275,19 @@ msgid "VAT details and general remarks..."
 msgstr "تفاصيل الضريبة وملاحظات عامة..."
 
 #. module: noptechs_lease_management
-#: model:ir.model.fields.selection,name:noptechs_lease_management.selection__company_lease__unit_type__warehouse
-msgid "Warehouse"
-msgstr "مستودع"
+#: model:ir.model.fields.selection,name:noptechs_lease_management.selection__company_lease__unit_type__apartment
+msgid "Apartment"
+msgstr "شقة"
+
+#. module: noptechs_lease_management
+#: model:ir.model.fields.selection,name:noptechs_lease_management.selection__company_lease__unit_type__contractors_apartment
+msgid "Contractors Apartment"
+msgstr "شقة مقاولين"
+
+#. module: noptechs_lease_management
+#: model:ir.model.fields.selection,name:noptechs_lease_management.selection__company_lease__unit_type__customer_service_apartment
+msgid "Customer Service Apartment"
+msgstr "شقة خدمة عملاء"
 
 #. module: noptechs_lease_management
 #: model:ir.model.fields.selection,name:noptechs_lease_management.selection__company_lease__lease_status__active
@@ -222,6 +318,11 @@ msgstr "المدفوعات"
 #: model:ir.model.fields,field_description:noptechs_lease_management.field_company_lease_payment__payment_date
 msgid "Payment Date"
 msgstr "تاريخ الدفع"
+
+#. module: noptechs_lease_management
+#: model:ir.model.fields,field_description:noptechs_lease_management.field_company_lease_payment__installment_number
+msgid "Installment Number"
+msgstr "رقم الدفعة"
 
 #. module: noptechs_lease_management
 #: model:ir.model.fields,field_description:noptechs_lease_management.field_company_lease_payment__amount
@@ -257,3 +358,23 @@ msgstr "ارفع إيصال/إيصالات التحويل لهذه الدفعة.
 #: model:ir.model.fields,field_description:noptechs_lease_management.field_company_lease__payment_line_ids
 msgid "Payments"
 msgstr "المدفوعات"
+
+#. module: noptechs_lease_management
+#: code:addons/noptechs_lease_management/models/lease_management.py:0
+msgid "Payment amount must be greater than zero."
+msgstr "مبلغ الدفعة يجب أن يكون أكبر من الصفر."
+
+#. module: noptechs_lease_management
+#: code:addons/noptechs_lease_management/models/lease_management.py:0
+msgid "The payment amount exceeds the remaining balance."
+msgstr "مبلغ الدفعة يتجاوز المبلغ المتبقي."
+
+#. module: noptechs_lease_management
+#: model_terms:ir.ui.view,arch_db:noptechs_lease_management.view_company_lease_form
+msgid "History"
+msgstr "السجل"
+
+#. module: noptechs_lease_management
+#: model_terms:ir.ui.view,arch_db:noptechs_lease_management.view_company_lease_form
+msgid "Log Note"
+msgstr "إضافة ملاحظة"

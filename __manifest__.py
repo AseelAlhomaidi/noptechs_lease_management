@@ -5,9 +5,9 @@
     "author": "Noptechs",
     "website": "https://www.noptechs.com",
     "category": "Company Leases",
-    "version": "19.0.1.0.0",
-    "license": "LGPL-3",
-"depends": ["base", "mail"],
+    "version": "0.1",
+    "license": "OPL-1",
+"depends": ["base", "mail","crm_extension",],
     "data": [
         "security/ir.model.access.csv",
         "views/lease_management_views.xml",
